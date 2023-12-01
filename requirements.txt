@@ -1,4 +1,4 @@
-# Estos paquetes son para experiencia de usuario
+# These are for a better user experience
 zsh
 neovim
 tmux
@@ -7,13 +7,13 @@ lsd
 bat
 zsh-syntax-highlighting
 zsh-autosuggestions
-xclip		# muy util para ExtractPorts
+xclip
 scrub
 flameshot
 
 
 
-# Estos paquetes son para qtile
+# These are needed by qtile
 rofi
 xserver-xorg
 xinit
