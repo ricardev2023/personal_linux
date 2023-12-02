@@ -222,4 +222,4 @@ function qtile(){
 }
 
 requirements
-#populate_zshrc
+populate_zshrc
