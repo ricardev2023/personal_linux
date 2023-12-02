@@ -25,8 +25,8 @@ function requirements(){
     echo -e "[*] Cloning p10k and plugins repositories\n"
     sleep 3
     sudo mkdir /usr/share/zsh/plugins
-    sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins
-    sudo git clone https://github.com/hcgraf/zsh-sudo /usr/share/zsh/plugins
+    sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins/powerlevel10k
+    sudo git clone https://github.com/hcgraf/zsh-sudo /usr/share/zsh/plugins/zsh-sudo
     echo -e "\n[+] DONE\n"
     sleep 3
     clear
@@ -149,7 +149,7 @@ EOL
     cat << 'EOL'>> ${ZDOTDIR:-$HOME}/.zshrc
     # Source p10k and plugins
     source /usr/share/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
-    source /usr/share/zsh/plugins/sudo.plugin.zsh
+    source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -212,7 +212,7 @@ EOL
     # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
     cat << 'EOL'>> ${ZDOTDIR:-$HOME}/.zshrc
     # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
-    (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize'
+    (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
 EOL
 }
 
