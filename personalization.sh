@@ -4,36 +4,36 @@
 function requirements(){
     # Requirements Installation.
     clear
-    echo -s "[*] Installing requirements.\n[*] Sudo privileges Needed.\n"
-    sleep(3)
+    echo -e "[*] Installing requirements.\n[*] Sudo privileges Needed.\n"
+    sleep 3
     sudo apt update
     cat ./requirements.txt | sudo xargs apt install -y
-    echo -s "\n[+] DONE\n"
-    sleep(3)
+    echo -e "\n[+] DONE\n"
+    sleep 3
     clear
 
     # Change terminal with zsh for user and root.
-    echo -s "[*] Selecting zsh as default shell for user and root\n[*] User Password Needed.\n"
-    sleep(3)
+    echo -e "[*] Selecting zsh as default shell for user and root\n[*] User Password Needed.\n"
+    sleep 3
     chsh -s $(which zsh)
     sudo chsh -s $(which zsh)
-    echo -s "\n[+] DONE\n"
-    sleep(3)
+    echo -e "\n[+] DONE\n"
+    sleep 3
     clear
 
     # Clone some needed repositories.
-    echo -s "[*] Cloning p10k and plugins repositories\n"
-    sleep(3)
+    echo -e "[*] Cloning p10k and plugins repositories\n"
+    sleep 3
     sudo mkdir /usr/share/zsh/plugins
     sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins
     sudo git clone https://github.com/hcgraf/zsh-sudo /usr/share/zsh/plugins
-    echo -s "\n[+] DONE\n"
-    sleep(3)
+    echo -e "\n[+] DONE\n"
+    sleep 3
     clear
 
     # Install "Meslo Nerd Font"
-    echo -s "[*] Installing Meslo Nerd Font. This is the best font to use with p10k.\n"
-    sleep(3)
+    echo -e "[*] Installing Meslo Nerd Font. This is the best font to use with p10k.\n"
+    sleep 3
     mkdir ~/Descargas/Meslo_Nerd_Font.tmp
     cd ~/Descargas/Meslo_Nerd_Font.tmp
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
@@ -43,14 +43,14 @@ function requirements(){
     sudo mkdir /usr/share/fonts/MesloLGS
     sudo cp * /usr/share/fonts/MesloLGS
     rm -R ~/Descargas/Meslo_Nerd_Font.tmp
-    echo -s "\n[+] DONE\n"
-    sleep(3)
+    echo -e "\n[+] DONE\n"
+    sleep 3
     clear
 
     # Configure "Meslo Nerd Font" as predefined.
-    echo -s "[*] To continue, please configure \"MesloLGS NF Regular\" as default font in your Terminal\n\n Press any key to continue."
+    echo -e "[*] To continue, please configure \"MesloLGS NF Regular\" as default font in your Terminal\n\n Press any key to continue."
     read
-    echo -s "\n[+] DONE\n"
+    echo -e "\n[+] DONE\n"
     clear
 }
 
