@@ -8,10 +8,7 @@ function requirements(){
     # Change terminal with zsh for user and root.
     chsh -s $(which zsh)
     sudo chsh -s $(which zsh)
-}
 
-# Configure PowerLevel10k.
-function prep_p10k(){
     # Clone some needed repositories.
     sudo mkdir /usr/share/zsh/plugins
     sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins
