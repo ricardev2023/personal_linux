@@ -55,6 +55,7 @@ function requirements(){
 }
 
 # Populate .zshrc
+# TODO: En vez de popular directamente el archivo .zshrc, es mejor popular un archivo a parte y luego utilizar source.
 function populate_zshrc(){
     # Fixing JAVA problem
     cat << 'EOL'> ${ZDOTDIR:-$HOME}/.zshrc
@@ -214,6 +215,11 @@ EOL
     # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
     (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
 EOL
+
+    # Copy .zshrc in root home
+    cp ${ZDOTDIR:-$HOME}/.zshrc /tmp/.zshrc.tmp
+    sudo cp /tmp/.zshrc.tmp /root/.zshrc
+    rm /tmp/.zshrc.tmp
 }
 
 # Install qtile
