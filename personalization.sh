@@ -24,7 +24,6 @@ function requirements(){
     sudo cp * /usr/share/fonts
 }
 
-# TODO: Crear una función llamada populate_zshrc
 # Populate .zshrc
 function populate_zshrc(){
     # Fixing JAVA problem
@@ -192,5 +191,4 @@ function qtile(){
 }
 
 requirements
-prep_p10k
 populate_zshrc
