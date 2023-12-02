@@ -102,12 +102,12 @@ EOL
     alias ls='lsd --group-dirs=first'
     alias cat='bat'
 
-    alias fix_wallpaper='feh --bg-fill /usr/share/personalization/qtile/themes/wallpapers/$(cat /usr/share/personalization/qtile/wallpaper.txt)'
-    alias change_theme='/usr/share/personalization/scripts/theme.sh'
-
-    alias set_target='/usr/share/personalization/scripts/target.sh'
-    alias unset_target='rm -f /home/strelock/Documents/htb/target/target.txt'
-    alias htb_vpn='sudo openvpn /home/strelock/Documents/htb/vpn/lab_ajcruz15.ovpn'
+    # These aliases are for a better qtile user experience
+    #alias fix_wallpaper='feh --bg-fill /usr/share/personalization/qtile/themes/wallpapers/$(cat /usr/share/personalization/qtile/wallpaper.txt)'
+    #alias change_theme='/usr/share/personalization/scripts/theme.sh'
+    #alias set_target='/usr/share/personalization/scripts/target.sh'
+    #alias unset_target='rm -f /home/strelock/Documents/htb/target/target.txt'
+    #alias htb_vpn='sudo openvpn /home/strelock/Documents/htb/vpn/lab_ajcruz15.ovpn'
 
 EOL
 
