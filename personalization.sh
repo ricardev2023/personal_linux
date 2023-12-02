@@ -3,19 +3,34 @@
 # Requirements installation
 function requirements(){
     # Requirements Installation.
+    echo -s "[*] Installing requirements.\n[*] Sudo privileges Needed.\n"
+    sleep(3)
     sudo apt update
-    cat ./requirements.txt | sudo xargs apt install
+    cat ./requirements.txt | sudo xargs apt install -y
+    echo -s "\n[+] DONE\n"
+    sleep(3)
+    clear
 
     # Change terminal with zsh for user and root.
+    echo -s "[*] Selecting zsh as default shell for user and root\n[*] User Password Needed.\n"
+    sleep(3)
     chsh -s $(which zsh)
     sudo chsh -s $(which zsh)
+    echo -s "\n[+] DONE\n"
+    sleep(3)
+    clear
 
     # Clone some needed repositories.
+    echo -s "[*] Cloning p10k and plugins repositories\n"
     sudo mkdir /usr/share/zsh/plugins
     sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins
     sudo git clone https://github.com/hcgraf/zsh-sudo /usr/share/zsh/plugins
+    echo -s "\n[+] DONE\n"
+    sleep(3)
+    clear
 
     # Install "Meslo Nerd Font"
+    echo -s "[*] Installing Meslo Nerd Font. This is the best font to use with p10k.\n"
     mkdir ~/Descargas/Meslo_Nerd_Font
     cd ~/Descargas/Meslo_Nerd_Font
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
@@ -23,6 +38,16 @@ function requirements(){
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
     sudo cp * /usr/share/fonts
+    echo -s "\n[+] DONE\n"
+    sleep(3)
+    clear
+
+    # Configure "Meslo Nerd Font" as predefined.
+    echo -s "[*] To continue, please configure \"MesloLGS NF Regular\" as default font in your Terminal\n\n Press any key to continue."
+    read
+    echo -s "\n[+] DONE\n"
+    sleep(3)
+    clear
 }
 
 # Populate .zshrc
@@ -47,7 +72,7 @@ EOL
     cat << 'EOL'>> ${ZDOTDIR:-$HOME}/.zshrc
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    
+
 EOL
 
     # Use emacs keybindings even if our EDITOR is set to vi
@@ -102,7 +127,7 @@ EOL
     alias l='lsd --group-dirs=first'
     alias lla='lsd -lha --group-dirs=first'
     alias ls='lsd --group-dirs=first'
-    alias cat='bat'
+    alias cat='batcat'
 
     # These aliases are for a better qtile user experience
     #alias fix_wallpaper='feh --bg-fill /usr/share/personalization/qtile/themes/wallpapers/$(cat /usr/share/personalization/qtile/wallpaper.txt)'
@@ -193,4 +218,4 @@ function qtile(){
 }
 
 requirements
-populate_zshrc
+#populate_zshrc
