@@ -3,6 +3,7 @@
 # Requirements installation
 function requirements(){
     # Requirements Installation.
+    clear
     echo -s "[*] Installing requirements.\n[*] Sudo privileges Needed.\n"
     sleep(3)
     sudo apt update
@@ -22,6 +23,7 @@ function requirements(){
 
     # Clone some needed repositories.
     echo -s "[*] Cloning p10k and plugins repositories\n"
+    sleep(3)
     sudo mkdir /usr/share/zsh/plugins
     sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins
     sudo git clone https://github.com/hcgraf/zsh-sudo /usr/share/zsh/plugins
@@ -31,13 +33,16 @@ function requirements(){
 
     # Install "Meslo Nerd Font"
     echo -s "[*] Installing Meslo Nerd Font. This is the best font to use with p10k.\n"
-    mkdir ~/Descargas/Meslo_Nerd_Font
-    cd ~/Descargas/Meslo_Nerd_Font
+    sleep(3)
+    mkdir ~/Descargas/Meslo_Nerd_Font.tmp
+    cd ~/Descargas/Meslo_Nerd_Font.tmp
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-    sudo cp * /usr/share/fonts
+    sudo mkdir /usr/share/fonts/MesloLGS
+    sudo cp * /usr/share/fonts/MesloLGS
+    rm -R ~/Descargas/Meslo_Nerd_Font.tmp
     echo -s "\n[+] DONE\n"
     sleep(3)
     clear
@@ -46,7 +51,6 @@ function requirements(){
     echo -s "[*] To continue, please configure \"MesloLGS NF Regular\" as default font in your Terminal\n\n Press any key to continue."
     read
     echo -s "\n[+] DONE\n"
-    sleep(3)
     clear
 }
 
