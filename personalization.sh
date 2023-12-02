@@ -3,6 +3,7 @@
 # Requirements installation
 function requirements(){
     # Requirements Installation.
+    sudo apt update
     cat ./requirements.txt | sudo xargs apt install
 
     # Change terminal with zsh for user and root.
@@ -46,6 +47,7 @@ EOL
     cat << 'EOL'>> ${ZDOTDIR:-$HOME}/.zshrc
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    
 EOL
 
     # Use emacs keybindings even if our EDITOR is set to vi
