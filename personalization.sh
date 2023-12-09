@@ -7,7 +7,7 @@ function requirements(){
     echo -e "[*] Installing requirements.\n[*] Sudo privileges Needed.\n"
     sleep 3
     sudo apt update
-    cat ./requirements.txt | sudo xargs apt install -y
+    cat ./zsh_files/requirements.txt | sudo xargs apt install -y
     echo -e "\n[+] DONE\n"
     sleep 3
     clear
@@ -27,7 +27,7 @@ function requirements(){
     sudo mkdir /usr/share/zsh/plugins
     sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k /usr/share/zsh/plugins/powerlevel10k
     sudo git clone https://github.com/hcgraf/zsh-sudo /usr/share/zsh/plugins/zsh-sudo
-    sudo cp ./personal_linux.zsh /usr/share/zsh/plugins
+    sudo cp ./zsh_files/personal_linux.zsh /usr/share/zsh/plugins
     echo -e "\n[+] DONE\n"
     sleep 3
     clear
@@ -74,6 +74,7 @@ EOL
 
 # Install qtile
 function qtile(){
+    python3 pip install xcffib
     python3 pip install qtile
 }
 
