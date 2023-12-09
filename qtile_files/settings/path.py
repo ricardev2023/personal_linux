@@ -1,5 +1,5 @@
 # QTILE Path Settings
-# by strelock
+# by ricardev2023
 
 # This path is used by qtile to find the config.py file.
 

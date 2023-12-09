@@ -1,5 +1,5 @@
 # QTILE Config file
-# by strelock
+# by ricardev2023
 
 # http://www.qtile.org/
 

@@ -1,5 +1,5 @@
 # QTILE Keybinding Settings
-# by strelock
+# by ricardev2023
 
 # https://docs.qtile.org/en/stable/manual/config/keys.html
 
@@ -20,6 +20,7 @@ from libqtile.utils import guess_terminal
 # mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
 # mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
 mod = "mod4"
+
 # This util allows to define which terminal is used.
 terminal = guess_terminal()
 
@@ -104,7 +105,7 @@ keys = [
 
     # Rofi
     Key([mod], "m", 
-    lazy.spawn("rofi -no-lazy-grab -show drun -modi drun -theme /home/strelock/.config/rofi/launchers/misc/launchpad"), 
+    lazy.spawn("rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launchers/misc/launchpad"), 
     desc="Launch rofi"),
     
     # Dolphin

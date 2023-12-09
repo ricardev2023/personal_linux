@@ -1,10 +1,5 @@
 # QTILE Multimonitor Settings
-# by strelock
-
-# Based on:
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
+# by ricardev2023
 
 # Multimonitor support (Not in use on my configuration)
 

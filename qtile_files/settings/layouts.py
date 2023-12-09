@@ -1,5 +1,5 @@
 # QTILE Layouts Settings
-# by strelock
+# by ricardev2023
 
 # https://docs.qtile.org/en/stable/manual/config/layouts.html
 

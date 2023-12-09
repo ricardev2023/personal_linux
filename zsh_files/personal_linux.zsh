@@ -54,13 +54,13 @@ alias ls='lsd --group-dirs=first'
 alias cat='batcat'
 
 # These aliases are for a better qtile user experience
-# TODO: Convertir los alias fix_wallpaper, unset_target y htb_vpn en scripts en la carpeta /usr/share/personalization/scripts
-# TODO: Comprobar los scripts theme.sh y target.sh que no tengan ninguna ruta relativa.
-#alias fix_wallpaper='feh --bg-fill /usr/share/personalization/qtile/themes/wallpapers/$(cat /usr/share/personalization/qtile/wallpaper.txt)'
-#alias change_theme='/usr/share/personalization/scripts/theme.sh'
-#alias set_target='/usr/share/personalization/scripts/target.sh'
-#alias unset_target='rm -f /home/strelock/Documents/htb/target/target.txt'
-#alias htb_vpn='sudo openvpn /home/strelock/Documents/htb/vpn/lab_ajcruz15.ovpn'
+# TODO: confirmar que el script target funciona con una IP para setear el target y sin nada para eliminarlo.
+# TODO: Si lo de arriba funciona, eliminar unset_target.
+alias fix_wallpaper='feh --bg-fill ~/.config/qtile/themes/wallpapers/$(cat ~/.config/qtile/qtile/wallpaper.txt)'
+alias change_theme='~/.config/qtile/scripts/theme.sh'
+alias target='~/.config/qtile/scripts/target.sh'
+alias unset_target='rm -f ~/.config/qtile/scripts/target.txt'
+alias htb_vpn='sudo openvpn /PATH/TO/YOUR/VPN/FILE'
 
 # Source p10k and plugins
 source /usr/share/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme

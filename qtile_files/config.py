@@ -1,12 +1,7 @@
 # QTILE Config file
-# by strelock
+# by ricardev2023
 
 # http://www.qtile.org/
-
-# Based on:
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
 
 from libqtile import hook
 

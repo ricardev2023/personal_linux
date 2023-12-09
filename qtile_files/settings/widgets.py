@@ -1,5 +1,5 @@
 # QTILE Widgets Settings
-# by strelock
+# by ricardev2023
 
 from libqtile import widget
 from .theme import colors
@@ -79,7 +79,7 @@ def workspaces():
         separator(),
         widget.GroupBox(
             **base(fg='light'),
-            font='UbuntuMono Nerd Font',
+            font='MesloLGS NF',
             fontsize=19,
             margin_y=3,
             margin_x=0,
@@ -183,7 +183,7 @@ secondary_widgets = [
 ]
 
 widget_defaults = {
-    'font': 'UbuntuMono Nerd Font Bold',
+    'font': 'MesloLGS NF',
     'fontsize': 14,
     'padding': 1,
 }

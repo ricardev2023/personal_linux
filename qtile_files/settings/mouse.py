@@ -1,5 +1,5 @@
 # QTILE Mouse Settings
-# by strelock
+# by ricardev2023
 
 # The mouse config file variable defines a set of global mouse actions, 
 # and is a list of Click and Drag objects, 

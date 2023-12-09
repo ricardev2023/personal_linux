@@ -66,10 +66,10 @@ function populate_zshrc(){
 EOL
 
     # Source personal_linux.zsh in root's .zshrc
-    sudo cat << 'EOL'>> /root/.zshrc
-    # Source personal_linux.zsh
-    source /usr/share/zsh/plugins/personal_linux.zsh
-EOL
+    #sudo cat << 'EOL'>> /root/.zshrc
+    ## Source personal_linux.zsh
+    #source /usr/share/zsh/plugins/personal_linux.zsh
+#EOL
 }
 
 # Install qtile
@@ -81,12 +81,14 @@ function qtile(){
     sudo cp ./qtile_files/qtile.desktop /usr/share/xsessions/
 
     # Creating configuration files for regular-user
-    mkdir $HOME/.config/qtile
-    cp ./qtile_files/* $HOME/.config/qtile
+    mkdir -p $HOME/.config/qtile
+    cp -r ./qtile_files/* ~/.config/qtile
+    mv ~/.config/qtile/picom.conf ~/.config/
 
     # Creating configuration files for root
-    sudo mkdir root/.config/qtile
-    cp ./qtile_files/* root/.config/qtile
+    sudo mkdir -p root/.config/qtile
+    sudo cp -r ./qtile_files/* root/.config/qtile
+    sudo mv -r root/.config/qtile/picom.conf root/.config/
 }
 
 requirements
