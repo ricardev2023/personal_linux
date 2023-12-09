@@ -74,9 +74,21 @@ EOL
 
 # Install qtile
 function qtile(){
-    python3 pip install xcffib
-    python3 pip install qtile
+    # Installing qtile
+    sudo pip3 install qtile --break-system-packages
+
+    # Creating an X session manager's menu entry
+    sudo cp ./qtile_files/qtile.desktop /usr/share/xsessions/
+
+    # Creating configuration files for regular-user
+    mkdir $HOME/.config/qtile
+    cp ./qtile_files/* $HOME/.config/qtile
+
+    # Creating configuration files for root
+    sudo mkdir root/.config/qtile
+    cp ./qtile_files/* root/.config/qtile
 }
 
 requirements
 populate_zshrc
+qtile
