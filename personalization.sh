@@ -84,6 +84,7 @@ function qtile(){
     mkdir -p $HOME/.config/qtile
     cp -r ./qtile_files/* ~/.config/qtile
     mv ~/.config/qtile/picom.conf ~/.config/
+    chmod +x ~/.config/qtile/autostart.sh
 
     # Creating configuration files for root
     sudo mkdir -p root/.config/qtile

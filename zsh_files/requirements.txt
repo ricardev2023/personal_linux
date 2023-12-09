@@ -17,5 +17,6 @@ python3
 python3-pip 
 python3-xcffib 
 python3-cairocffi
+python3-dbus-next
 picom
 feh
