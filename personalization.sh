@@ -57,7 +57,6 @@ function requirements(){
 }
 
 # Populate .zshrc
-# TODO: En vez de popular directamente el archivo .zshrc, es mejor popular un archivo a parte y luego utilizar source.
 function populate_zshrc(){
 
     # Source personal_linux.zsh in regular-user's .zshrc
@@ -67,7 +66,7 @@ function populate_zshrc(){
 EOL
 
     # Source personal_linux.zsh in root's .zshrc
-    sudo cat << 'EOL'>> ${ZDOTDIR:-$HOME}/.zshrc
+    sudo cat << 'EOL'>> /root/.zshrc
     # Source personal_linux.zsh
     source /usr/share/zsh/plugins/personal_linux.zsh
 EOL
