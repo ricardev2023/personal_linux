@@ -15,8 +15,8 @@ function requirements(){
     # Change terminal with zsh for user and root.
     echo -e "[*] Selecting zsh as default shell for user and root\n[*] User Password Needed.\n"
     sleep 3
-    chsh -s /bin/bash
-    sudo chsh -s /bin/bash
+    chsh -s /bin/zsh
+    sudo chsh -s /bin/zsh
     echo -e "\n[+] DONE\n"
     sleep 3
     clear
