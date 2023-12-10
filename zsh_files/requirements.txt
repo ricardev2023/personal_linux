@@ -1,4 +1,5 @@
 zsh
+net-tools
 neovim
 tmux
 locate

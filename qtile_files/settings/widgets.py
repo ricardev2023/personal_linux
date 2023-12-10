@@ -4,6 +4,7 @@
 from libqtile import widget
 from .theme import colors
 from subprocess import check_output
+from .path import qtile_path
 from os import path
 
 # Get the icons at:
@@ -42,7 +43,7 @@ class Commands:
         All this information is saved in a txt file.
         '''
         try:
-            target_path = path.join(path.expanduser('~'), "Documents", "htb", "target", "target.txt")
+            target_path = path.join(qtile_path, "scripts", "target.txt")
             return check_output(["cat", target_path]).decode("utf-8").replace("\n", "") + "  "
         except:
             return "Target Not Set  "

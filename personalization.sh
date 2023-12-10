@@ -91,6 +91,9 @@ function qtile(){
     sudo mkdir -p root/.config/qtile
     sudo cp -r ./qtile_files/* root/.config/qtile
     sudo mv root/.config/qtile/picom.conf root/.config/
+
+    # Change permisions to scripts in ~/.config/qtile/scripts folder
+    chmod +x ~/.config/qtile/scripts/*
 }
 
 requirements
