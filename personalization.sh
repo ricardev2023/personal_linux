@@ -41,7 +41,7 @@ function requirements(){
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf ~/Descargas/Meslo_Nerd_Font.tmp/
     wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf ~/Descargas/Meslo_Nerd_Font.tmp/
     sudo mkdir /usr/share/fonts/MesloLGS
-    sudo cp * /usr/share/fonts/MesloLGS
+    sudo cp ~/Descargas/Meslo_Nerd_Font.tmp/* /usr/share/fonts/MesloLGS
     rm -R ~/Descargas/Meslo_Nerd_Font.tmp
     sudo fc-cache -f -v
     echo -e "\n[+] DONE\n"
@@ -88,7 +88,7 @@ function qtile(){
     # Creating configuration files for root
     sudo mkdir -p root/.config/qtile
     sudo cp -r ./qtile_files/* root/.config/qtile
-    sudo mv -r root/.config/qtile/picom.conf root/.config/
+    sudo mv root/.config/qtile/picom.conf root/.config/
 }
 
 requirements
