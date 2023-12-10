@@ -12,10 +12,8 @@
 
 if [ "$1" = "" ] 
   then
-    rm -f ~/.config/qtile/scripts/target.txt
+    rm -f ~/.config/qtile/scripts/target.txt;
   else 
-    touch "~/.config/qtile/scripts/target.txt";
-    echo $1 > "~/.config/qtile/scripts/target.txt";  
+    touch ~/.config/qtile/scripts/target.txt;
+    echo $1 > ~/.config/qtile/scripts/target.txt;  
 fi 
-
-

@@ -54,12 +54,9 @@ alias ls='lsd --group-dirs=first'
 alias cat='batcat'
 
 # These aliases are for a better qtile user experience
-# TODO: confirmar que el script target funciona con una IP para setear el target y sin nada para eliminarlo.
-# TODO: Si lo de arriba funciona, eliminar unset_target.
-alias fix_wallpaper='feh --bg-fill ~/.config/qtile/themes/wallpapers/$(cat ~/.config/qtile/wallpaper.txt)'
+alias fix_wallpaper='feh --bg-fill ~/.config/qtile/themes/wallpapers/$(cat ~/.config/qtile/themes/wallpaper.txt)'
 alias change_theme='~/.config/qtile/scripts/theme.sh'
 alias target='~/.config/qtile/scripts/target.sh'
-alias unset_target='rm -f ~/.config/qtile/scripts/target.txt'
 alias htb_vpn='sudo openvpn /PATH/TO/YOUR/VPN/FILE'
 
 # Source p10k and plugins

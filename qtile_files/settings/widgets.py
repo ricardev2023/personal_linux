@@ -11,6 +11,10 @@ from os import path
 # https://www.nerdfonts.com/cheat-sheet
 # You need a Nerd Font installed.
 
+# TODO: No funciona el widget de my_ip. 
+#   La función devuelve la IP correctamente, sin embargo, en la version final, no se pinta dicha IP en el widget.
+# TODO: No funcionan los update_interval de los widget.
+
 # Initialize a class for all the commands used in widgets.
 class Commands:
     def my_ip(self):

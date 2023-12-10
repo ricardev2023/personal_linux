@@ -33,7 +33,7 @@ if search_theme $THEME; then
     # This will generate a new file for the wallpaper name.
     touch ~/.config/qtile/wallpaper.txt;
     # This is for the autostart.sh script to save the changes.
-    echo "$THEME.png" > ~/.config/qtile/wallpaper.txt;
+    echo "$THEME.png" > ~/.config/qtile/themes/wallpaper.txt;
     # This changes the wallpaper
     feh --bg-fill ~/.config/qtile/themes/wallpapers/$THEME.png;
     
