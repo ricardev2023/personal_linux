@@ -36,11 +36,10 @@ function requirements(){
     echo -e "[*] Installing Meslo Nerd Font. This is the best font to use with p10k.\n"
     sleep 3
     mkdir ~/Descargas/Meslo_Nerd_Font.tmp
-    cd ~/Descargas/Meslo_Nerd_Font.tmp
-    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
-    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
-    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf ~/Descargas/Meslo_Nerd_Font.tmp/
+    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf ~/Descargas/Meslo_Nerd_Font.tmp/
+    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf ~/Descargas/Meslo_Nerd_Font.tmp/
+    wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf ~/Descargas/Meslo_Nerd_Font.tmp/
     sudo mkdir /usr/share/fonts/MesloLGS
     sudo cp * /usr/share/fonts/MesloLGS
     rm -R ~/Descargas/Meslo_Nerd_Font.tmp
