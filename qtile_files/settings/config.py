@@ -19,7 +19,11 @@ import subprocess
 # Autostart script only at sartup.
 @hook.subscribe.startup_once
 def autostart():
-    subprocess.call([path.join(qtile_path, 'autostart.sh')])
+    subprocess.call([path.join(qtile_path, 'startup_once.sh')])
+
+@hook.subscribe.startup_once
+def autostart():
+    subprocess.call([path.join(qtile_path, 'restart.sh')])
 
 # Some variables needed for a proper configuration.
 main = None
