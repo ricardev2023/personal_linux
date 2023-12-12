@@ -17,9 +17,12 @@ from os import path
 import subprocess
 
 @hook.subscribe.startup_once
-def autostart():
-    subprocess.call([path.join(qtile_path, 'autostart.sh')])
+def startup_once():
+    subprocess.call([path.join(qtile_path, 'scripts', 'startup_once.sh')])
 
+@hook.subscribe.startup
+def restart():
+    subprocess.call([path.join(qtile_path, 'scripts', 'restart.sh')])
 
 main = None
 dgroups_key_binder = None

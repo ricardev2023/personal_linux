@@ -54,7 +54,6 @@ alias ls='lsd --group-dirs=first'
 alias cat='batcat'
 
 # These aliases are for a better qtile user experience
-alias fix_wallpaper='feh --bg-fill ~/.config/qtile/themes/wallpapers/$(cat ~/.config/qtile/themes/wallpaper.txt)'
 alias change_theme='~/.config/qtile/scripts/theme.sh'
 alias target='~/.config/qtile/scripts/target.sh'
 alias htb_vpn='sudo openvpn /PATH/TO/YOUR/VPN/FILE'
