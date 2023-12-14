@@ -13,7 +13,7 @@ from os import path
 
 # TODO: No funciona el widget de my_ip. 
 #   La función devuelve la IP correctamente, sin embargo, en la version final, no se pinta dicha IP en el widget.
-# TODO: No funcionan los update_interval de los widget.
+# TODO: No funcionan los update_interval de los widget. tarda más de lo esperado.
 
 # Initialize a class for all the commands used in widgets.
 class Commands:
@@ -126,7 +126,7 @@ def target_widget(fg="text", bg="dark"):
     return widget.GenPollText(
         **base(fg, bg),
         func=commands.target,
-        update_intervale=60
+        update_interval=60
 
     )
 
