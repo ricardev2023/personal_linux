@@ -93,6 +93,13 @@ function qtile(){
 
     # Change permisions to scripts in ~/.config/qtile/scripts folder
     chmod +x ~/.config/qtile/scripts/*
+
+    # Install rofi themes with multiple visual options
+    sudo mkdir /usr/share/rofi/adi1090x_themes
+    sudo git clone --depth=1 https://github.com/adi1090x/rofi.git /usr/share/rofi/adi1090x_themes
+    cd /usr/share/rofi/adi1090x_themes/
+    chmod +x ./setup.sh
+    ./setup.sh
 }
 
 requirements
