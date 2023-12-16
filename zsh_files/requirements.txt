@@ -1,4 +1,5 @@
 zsh
+sed
 net-tools
 neovim
 tmux
