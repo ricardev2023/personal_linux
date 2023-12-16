@@ -18,14 +18,14 @@ layout_conf = {
     'margin': 4
 }
 
-# Layout list    
+# Layout list
 # For using more layouts uncomment below.
 layouts = [
     layout.Columns(**layout_conf),
+    layout.Bsp(**layout_conf),
     layout.Max(),
     #layout.MonadTall(**layout_conf),
     #layout.MonadWide(**layout_conf),
-    #layout.Bsp(**layout_conf),
     #layout.Matrix(columns=2, **layout_conf),
     #layout.RatioTile(**layout_conf),
     # layout.Tile(),
@@ -38,7 +38,7 @@ layouts = [
 floating_layout = layout.Floating(
     float_rules=[
         *layout.Floating.default_float_rules,
-        # Example 
+        # Example
         # Match(wm_class='confirmreset'),
     ],
     border_focus=colors["color4"][0]
