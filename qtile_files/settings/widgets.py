@@ -11,9 +11,6 @@ from os import path
 # https://www.nerdfonts.com/cheat-sheet
 # You need a Nerd Font installed.
 
-# TODO: No funciona el widget de my_ip. 
-#   La función devuelve la IP correctamente, sin embargo, en la version final, no se pinta dicha IP en el widget.
-
 # Initialize a class for all the commands used in widgets.
 class Commands:
     def my_ip(self):
@@ -22,7 +19,7 @@ class Commands:
         '''
         interface = "ens33" # Change this
         try:
-            ip = check_output(['ifconfig', '-a', interface]).decode("utf-8").replace("\n", "")
+            ip = check_output(['/usr/sbin/ifconfig', '-a', interface]).decode("utf-8").replace("\n", "")
             position = ip.find('inet ')
             return str(ip[(position + 5):(ip.find(" ", position + 5))]) + " "
         except:
@@ -34,7 +31,7 @@ class Commands:
         '''
         interface = "tun0" # Change this
         try:
-            ip = check_output(['ifconfig', '-a', interface]).decode("utf-8").replace("\n", "")
+            ip = check_output(['/usr/sbin/ifconfig', '-a', interface]).decode("utf-8").replace("\n", "")
             position = ip.find('inet ')
             return str(ip[(position + 5):(ip.find(" ", position + 5))]) + " "
         except:
