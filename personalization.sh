@@ -100,6 +100,9 @@ function qtile(){
     cd /usr/share/rofi/adi1090x_themes/
     chmod +x ./setup.sh
     ./setup.sh
+
+    # We have to solve a bug in rofi's config.rasi because it is not yet solved in the git repo.
+    sed -i 's/run,drun/run-drun/g' "~/.config/rofi/config.rasi"
 }
 
 requirements

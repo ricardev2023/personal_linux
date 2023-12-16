@@ -105,7 +105,7 @@ keys = [
 
     # Rofi
     Key([mod], "m", 
-    lazy.spawn("rofi -no-lazy-grab -show drun -theme ~/.config/rofi/launchers/type-4/style-1.rasi"), 
+    lazy.spawn("rofi -no-lazy-grab -show drun -theme ~/.config/rofi/launchers/type-2/style-5.rasi"), 
     desc="Launch rofi"),
     
     # Dolphin
