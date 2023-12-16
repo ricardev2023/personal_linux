@@ -99,9 +99,9 @@ def workspaces():
             other_screen_border=colors['dark'],
             disable_drag=True
         ),
-        separator(),
-        widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
-        separator(),
+         separator(),
+         widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
+         separator(),
     ]
 
 def ip_widget(fg="text", bg="dark"):
