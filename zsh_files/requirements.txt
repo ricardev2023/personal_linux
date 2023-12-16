@@ -21,3 +21,5 @@ python3-cairocffi
 python3-dbus-next
 feh
 picom
+gnome-calculator
+dolphin

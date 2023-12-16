@@ -92,16 +92,16 @@ keys = [
     Key([mod], "f", lazy.spawn("firefox"), desc="Launch firefox"),
     
     # Google Chrome
-    Key([mod], "g", lazy.spawn("google-chrome-stable"), desc="Launch chrome"),
+    # Key([mod], "g", lazy.spawn("google-chrome-stable"), desc="Launch chrome"),
     
     # IDA Pro Decompiler
-    Key([mod], "i", lazy.spawn("ida64"), desc="Launch ida pro decompiler"),
+    # Key([mod], "i", lazy.spawn("ida64"), desc="Launch ida pro decompiler"),
 
     # GHIDRA Decompiler
-    Key([mod], "d", lazy.spawn("ghidra"), desc="Launch ghidra decompiler"),
+    # Key([mod], "d", lazy.spawn("ghidra"), desc="Launch ghidra decompiler"),
     
     # Burpsuite
-    Key([mod], "b", lazy.spawn("burpsuite"), desc="Launch Burpsuite"),
+    # Key([mod], "b", lazy.spawn("burpsuite"), desc="Launch Burpsuite"),
 
     # Rofi
     Key([mod], "m", 
