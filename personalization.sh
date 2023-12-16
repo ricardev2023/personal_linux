@@ -102,7 +102,7 @@ function qtile(){
     ./setup.sh
 
     # We have to solve a bug in rofi's config.rasi because it is not yet solved in the git repo.
-    sed -i 's/run,drun/run-drun/g' "~/.config/rofi/config.rasi"
+    sed -i 's/run,drun/run-drun/g' '~/.config/rofi/config.rasi'
 }
 
 requirements
