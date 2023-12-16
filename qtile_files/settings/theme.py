@@ -11,7 +11,7 @@ from .path import qtile_path
 
 
 def load_theme():
-    theme = "fuji"
+    theme = "windmills"
 
     config = path.join(qtile_path, "config.json")
     if path.isfile(config):
