@@ -24,8 +24,18 @@ from .keys import keys, mod
 # 4. nf-oct-file_directory
 # 5. nf-fa-crosshairs
 
-
-groups = [Group(i) for i in [" Terminal", " Firefox", " Chrome", " Debugger", " Folders", " VPN", " Misc 1", " Misc 2", " Misc 3"]]
+# To identify wm_class, use the command xprop WM_CLASS
+groups = [
+    Group(" Terminal" , layout='bsp'), 
+    Group(" Browser"  , layout='max'      , matches=[Match(wm_class='firefox-esr'), Match(wm_class='google-chrome-stable')]), 
+    Group("󰖟 Burpsuite", layout='max'      , matches=[Match(wm_class='burp-StartBurp')]), 
+    Group(" Debugger" , layout='max'), 
+    Group(" Folders"  , layout='columns'),
+    Group(" VPN"      , layout='bsp'), 
+    Group(" Misc 1"   , layout='bsp'), 
+    Group(" Misc 2"   , layout='bsp'),  
+    Group(" Misc 3"   , layout='bsp')
+    ]
 
 for i, group in enumerate(groups):
     key_number = str(i + 1)
