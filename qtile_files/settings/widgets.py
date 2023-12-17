@@ -162,6 +162,8 @@ primary_widgets = [
 
     powerline('dark', 'color1'),
 
+    widget.KeyboardLayout(background=colors['dark'], padding=5, configured_keyboards=['us','es']),
+
     widget.Systray(background=colors['dark'], padding=5),
 ]
 

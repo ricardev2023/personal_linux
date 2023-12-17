@@ -66,9 +66,13 @@ keys = [
     # Toggle floating
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc="Toggle floating"),
 
-    #Toggle between different layouts as defined below
+    # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle next layout"),
     Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Toggle previous layout"),
+
+    # Toggle between keyboard layouts
+    Key([mod], "space", lazy.widget["KeyboardLayout"].next_keyboard(),
+        desc="Next keyboard layout"),
 
     # Kill window
     Key([mod], "q", lazy.window.kill(), desc="Kill Window"),
