@@ -103,6 +103,10 @@ function qtile(){
 
     # We have to solve a bug in rofi's config.rasi because it is not yet solved in the git repo.
     sed -i 's/run,drun/run-drun/g' ~/.config/rofi/config.rasi
+
+    # Install qtile-extras repository to use transparency in bar.
+    git clone https://github.com/elParaguayo/qtile-extras.git ~/.config/qtile/qtile-extras
+    pip install --user -v ~/.config/qtile/qtile-extras
 }
 
 requirements
