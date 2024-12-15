@@ -12,7 +12,7 @@
 # and various other options.
 
 from libqtile.config import Group, Match, Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from .keys import keys, mod
 
 # Instead of numerating the groups I am going to use glyphs (could be more than 5):
