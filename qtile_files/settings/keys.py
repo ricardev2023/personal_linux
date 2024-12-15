@@ -7,7 +7,7 @@
 # Individual key bindings are defined with libqtile.config.Key
 
 from libqtile.config import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 # Modifiers are special keys that are used in Keybindings, they could be:
