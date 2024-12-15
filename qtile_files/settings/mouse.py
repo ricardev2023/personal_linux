@@ -6,7 +6,7 @@
 # which define what to do when a window is clicked or dragged.
 
 from libqtile.config import Drag, Click
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from .keys import mod
 
 
